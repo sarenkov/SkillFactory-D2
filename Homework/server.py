@@ -36,5 +36,12 @@ def unautorized():
     return get_response_text(response.status)
 
 
-if __name__ == '__main__':
-    app.run()
+if os.environ.get("APP_LOCATION") == "heroku":
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 5000)),
+        server="gunicorn",
+        workers=3,
+    )
+else:
+    app.run(host="localhost", port=8080, debug=True)

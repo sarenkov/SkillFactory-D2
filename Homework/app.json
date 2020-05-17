@@ -1,0 +1,6 @@
+{
+    "name": "SjillFactory-D2 HomeWork",
+    "description": "Server translate errors on Sentry",
+    "image": "heroku/python",
+    "keywords": ["python", "bottle"],
+}
