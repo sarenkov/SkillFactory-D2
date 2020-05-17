@@ -1,2 +1,4 @@
 bottle
 gunicorn
+sentry_sdk
+sentry_sdk.integrations.bottle
